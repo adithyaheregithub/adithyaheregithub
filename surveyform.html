@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+:root{
+     --color-white: #f3f3f3;
+     --color-darkblue: #1b1b32;
+     --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+}
+*{
+    box-sizing:border-box;
+}
+body{
+    font-family:'Poppins', sans-serif;
+    font-size:1em;
+    font-weight:400;
+    line-height:1.5;
+    color:var(--color-white);
+    margin:0;
+    background:var(--color-darkblue);
+   background-image:url(https://ak.picdn.net/shutterstock/videos/651691/thumb/1.jpg);
+   background-size:cover;
+   background-repeat:no-repeat;
+   background-position:center;
+}
+h1{
+    font-weight:600;
+    line-height:4;
+}
+p{
+    font-weight:500;
+    line-height:3;
+}
+h1,
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+label{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+button{
+    border:none;
+}
+
+#container{text-align:center;
+    width:100%;
+    margin:1em auto 0 auto;
+    }
+header {
+  padding: 0 0.625rem;
+  margin-bottom: 1rem;
+}
+#description{
+    font-style:italic;
+    font-weight:400;
+     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.text-center{text-align:center;}
+.clue{font-size:0.67em;}
+
+form{
+    align:center;
+    background:var(--color-darkblue-alpha);
+    border-radius:1em;
+    width:70%;
+    height:70%;
+}
+@media (min-width:400px) {
+    form{padding:0.25em;}
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey form</title>
+</head>
+<body>
+<div id="container">
+<header>
+<h1 id="tittle" class="text-center">We Love to knows About You!</h1>
+<p id="description" class="text-center">Fill the details and submit your form</p>
+</header>
+<form action="https://www.freecodecamp.com/email-submit" id="Survey-form">
+<div class="form-group">
+    <label id="name-label" for="name" autofocus>Enter your Name:</label><br>
+    <input id="name" type="text" name="name" placeholder="full name" required>
+</div>
+<div class="form-group">
+    <label id="email-label" for="email">Enter your email:</label><br>
+    <input id="email" type="email" placeholder="email" required >
+</div>
+<div class="form-group">
+    <label id="number-label" for="number">Age: <span class="optional">(optional)</span></label><br>
+    <input id="number" type="number" placeholder= "Age" name="age" min="18" max="70">
+</div>
+<div class="form-group">
+    <p>Which is best suits you?</p>
+    <select name="role" id="dropdown" required>
+    <option disabled selected value >Select your role</option>
+    <option value="student">Student</option>
+    <option value="Graduate">Undergraduate</option>
+    <option value="Part-time">Postgraduate</option>
+    <option value="worker">Employee</option>
+    <option value="leader">Entrepreneur</option>
+    </select>
+</div>
+
+
+<div class="form-group">
+    <p>Which are the field interest you?</p>
+   <label><input type="radio" name="space">Space</label>
+
+   <label><input type="radio" name="Technology">Technology</label>
+
+   <label><input type="radio" name="bussiness">Bussiness</label>
+
+   <label><input type="radio" name="entertainment">Entertainment</label>
+
+   <label><input type="radio" name="art">Art and Literature</label>
+    
+</div>
+
+<div class="form-group">
+<p>What are improvements we can make?</p>
+<label> <input type="checkbox" name="user">User Interface </label>
+
+<label> <input type="checkbox" name="speed">Loading speed </label>
+
+<label> <input type="checkbox" name="graphic">Graphic's </label>
+
+<label> <input type="checkbox" name="server">Server</label>
+
+<label> <input type="checkbox" name="data">Data visualization </label>
+</div>
+
+<div class="form-group">
+<p>Any suggetion and your feeddback:</p>
+   <textarea name="comment" id="textarea" placeholder="Write" cols="30" rows="10"></textarea>
+</div>
+
+<div class="form-group">
+<button id="submit" type="submit" class="submit-button">Submit </button></div>
+    </form>
+</div>
+</body>
+</html>
